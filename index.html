@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每周汇报</title>
+</head>
+<body>
+    <h1>每周汇报</h1>
+    <a href="/add">新增汇报</a>
+    <ul>
+        {% for report in reports %}
+        <li>
+            <strong>{{ report.week }}</strong> - {{ report.date_created.strftime('%Y-%m-%d') }}<br>
+            {{ report.content }}
+            <a href="/delete/{{ report.id }}">删除</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
