@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增汇报</title>
+</head>
+<body>
+    <h1>新增汇报</h1>
+    <form action="/add" method="POST">
+        <label for="week">周次：</label><br>
+        <input type="text" id="week" name="week" required><br><br>
+        <label for="content">汇报内容：</label><br>
+        <textarea id="content" name="content" rows="5" required></textarea><br><br>
+        <button type="submit">提交</button>
+    </form>
+    <a href="/">返回</a>
+</body>
+</html>
